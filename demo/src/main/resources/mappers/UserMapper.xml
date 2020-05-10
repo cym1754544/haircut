@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.example.demo.mappers.UserMapper">
+
+    <select id="Sel" resultType="com.example.demo.pojo.User">
+        select * from user1 where id = #{id}
+    </select>
+
+    <update id="gnn">
+        update user set age=#{age} where name='小陈'
+    </update>
+
+
+
+</mapper>
+
+
+<!--
+mybatis实现类的四个满足条件
+1、 在mapper.xml中将namespace设置为mapper.Java的全限定名
+2、 将mapper.java接口的方法名和mapper.xml中statement的id保持一致。
+3、 将mapper.java接口的方法输入参数类型和mapper.xml中statement的parameterType保持一致
+4、 将mapper.java接口的方法输出 结果类型和mapper.xml中statement的resultType保持一致
+-->
